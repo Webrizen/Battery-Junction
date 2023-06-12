@@ -1,0 +1,127 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f1f1f1;
+    color: #1f1f1f;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+header{
+    background: #007bff;
+    color: #f1f1f1;
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    width: auto;
+    height: 35px;
+    background: rgba(225,225,225,0.1);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 0.1px solid rgba(225,225,225,0.3);
+}
+.logo:hover{
+    background: rgba(225,225,225,0.3);
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.links .ico{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 10px;
+    background: rgba(225,225,225,0.1);
+    border: 0.1px solid rgba(225,225,225,0.3);
+}
+.links .ico:hover{
+    background: rgba(225,225,225,0.3);
+    cursor: pointer;
+}
+section{
+    width: 100vw;
+    height: 90vh;
+    overflow-y: scroll;
+    align-items: center;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 65% 1fr;
+    gap: 10px;
+}
+.ads, .main{
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+    border: 0.1px solid rgba(192, 192, 192, 0.523);
+    border-radius: 10px;
+}
+.main{
+    border: none;
+}
+.battery{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.battery-level, .battery-status, .battery-charging, .battery-discharging, .battery-charging-time, .battery-remaining-time, .battery-capacity, .battery-health, .battery-temperature, .battery-charging-rate, .battery-discharging-rate{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border: 0.1px solid rgba(192, 192, 192, 0.523);
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.battery-level:hover, .battery-status:hover, .battery-charging:hover, .battery-discharging:hover, .battery-charging-time:hover, .battery-remaining-time:hover, .battery-capacity:hover, .battery-health:hover, .battery-temperature:hover, .battery-charging-rate:hover, .battery-discharging-rate:hover{
+    box-shadow: -1px -1px 50px 0px rgba(192, 192, 192, 0.523);
+}
+.battery-level-text, .battery-status-text, .battery-charging-text, .battery-discharging-text, .battery-charging-time-text, .battery-remaining-time-text, .battery-capacity-text, .battery-health-text, .battery-temperature-text, .battery-charging-rate-text, .battery-discharging-rate-text{
+    font-size: 1.6rem;
+    font-weight: 500;
+    background: linear-gradient(50deg, #007bff, #84b3c7);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    section{
+        grid-template-columns: 1fr;
+    }
+    .battery{
+        grid-template-columns: 1fr;
+    }
+    .ads{
+        height: 200px;
+    }
+}
